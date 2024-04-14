@@ -1,0 +1,55 @@
+/* Account.css */
+
+.account-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  }
+  
+  .account-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .password-form {
+    margin-top: 20px;
+  }
+  
+  .password-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .password-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 5px;
+  }
+  
+  .account-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .account-container button:hover {
+    background-color: #0056b3;
+  }

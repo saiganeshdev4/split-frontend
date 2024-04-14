@@ -1,0 +1,27 @@
+/* SingleActivity.css */
+
+.single-activity {
+    background-color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .single-activity:hover {
+    background-color: grey;
+  }
+  
+  .single-activity a {
+    text-decoration: none;
+  }
+  
+  .activity-line {
+    margin-bottom: 5px;
+  }
+  
+  .owe {
+    color: red;
+  }
+  
+  .receive {
+    color: green;
+  }
+  

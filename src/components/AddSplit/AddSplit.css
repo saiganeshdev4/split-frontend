@@ -1,0 +1,56 @@
+/* AddSplit.css */
+
+.add-split-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  }
+  
+ .expense-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .loading-message {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .add-split-container form p {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    font-size: 18px;
+    color: green;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-select,
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Add margin-right for spacing between buttons */
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  

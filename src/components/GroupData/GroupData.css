@@ -1,0 +1,34 @@
+.group-data-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.leave-group-message {
+    margin-top: 20px;
+}
+
+.leave-group-message p {
+    margin-bottom: 10px;
+}
+
+
+
+.add-members-button, .leave-group-button,.leave-group-message button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff; /* Change color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.add-members-button:hover, .leave-group-button:hover {
+    background-color: #0056b3; /* Change hover color as needed */
+}

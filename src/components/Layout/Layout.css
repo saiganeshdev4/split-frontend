@@ -1,0 +1,32 @@
+.navigation {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    margin-bottom: 100px;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .navigation ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navigation .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .navigation .button:hover {
+    background-color: #0056b3;
+  }
+  

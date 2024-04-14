@@ -1,0 +1,59 @@
+.split-deleted-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.split-deleted-container p {
+    margin-bottom: 10px;
+}
+
+.split-deleted-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.split-deleted-container button:hover {
+    background-color: #0056b3;
+}
+
+.split-info-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.split-info-container h2 {
+    margin-bottom: 10px;
+}
+
+.split-info-container p {
+    margin-bottom: 5px;
+}
+
+.split-action-buttons {
+    margin-top: 20px;
+}
+
+.split-action-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.split-action-buttons button:hover {
+    background-color: #0056b3;
+}

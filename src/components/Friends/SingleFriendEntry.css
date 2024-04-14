@@ -1,0 +1,33 @@
+.friend-entry {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.friend-entry.hover {
+    background-color: grey;
+}
+
+.friend-link {
+    text-decoration: none;
+    color: black; /* Change color as desired */
+}
+
+.friend-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.friend-money {
+    margin: 0;
+}
+
+.friend-money.positive {
+    color: green;
+}
+
+.friend-money.negative {
+    color: red;
+}

@@ -1,0 +1,41 @@
+.single-group {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.single-group.hover {
+    background-color: grey;
+}
+
+.group-link {
+    text-decoration: none;
+    color: black; /* Change color as desired */
+}
+
+.group-name {
+    margin: 0;
+}
+
+.group-msg {
+    margin: 5px 0;
+}
+
+.group-msg.red {
+    color: red;
+}
+
+.group-msg.green {
+    color: green;
+}
+
+.group-msg.lightblue{
+    color: lightblue;
+}
+
+.owe-list-item {
+    margin: 0;
+    color: lightblue;
+}

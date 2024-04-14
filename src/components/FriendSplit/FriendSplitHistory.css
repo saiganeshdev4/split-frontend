@@ -1,0 +1,29 @@
+.split-details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.split-details-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.settle-up-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Change color as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.settle-up-button:hover {
+    background-color: #0056b3; /* Change color as needed */
+}
+
+

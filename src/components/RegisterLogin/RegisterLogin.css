@@ -1,0 +1,51 @@
+.register-login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.register-login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-login-container form div {
+    margin-bottom: 10px;
+}
+
+.register-login-container form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-login-container form input[type="text"],
+.register-login-container form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-login-container form p {
+    color: red;
+    margin-top: 5px;
+}
+
+.register-login-container form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-login-container form button:hover {
+    background-color: #0056b3;
+}
+
