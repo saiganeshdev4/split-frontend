@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import axios from "axios";
-
+import { url_for_backend } from "../../index.js";
 import "./EditSplit.css";
 // known bugs
 //  1. make sure sum of money owed by everyone and totalMoney are equal.
@@ -25,7 +25,7 @@ function  EditSplit(props)
     useEffect(()=>{
         async function getData()
         {  
-            var result = await axios.get(`http://localhost:4000/split/${id}?current_user=${props.currentUser}`);
+            var result = await axios.get(url_for_backend+`/split/${id}?current_user=${props.currentUser}`);
             setSplitName(result.data.split_name);
             setTotalMoney(parseInt(result.data.fourthLine.split(" ")[2]));
             var selected=[];
@@ -39,7 +39,7 @@ function  EditSplit(props)
             setInputValues({...input});
             
             // get group members for the group
-            var result_1 = await axios.get(`http://localhost:4000/group/${group_name}`);
+            var result_1 = await axios.get(url_for_backend+`/group/${group_name}`);
             var modified_result = ["You"];
             result_1.data.group_members.forEach((ele)=> ele!==props.currentUser && modified_result.push(ele) );
             setSecondPickListOptions(modified_result);
@@ -90,7 +90,7 @@ function  EditSplit(props)
 };
 console.log(body);
     try{
-    const result=await axios.put(`http://localhost:4000/edit/split/${id}`,body);  
+    const result=await axios.put(url_for_backend+`/edit/split/${id}`,body);  
     
     }
     catch(err)

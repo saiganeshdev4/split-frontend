@@ -4,6 +4,7 @@ import axios from "axios";
 import Select from "react-select";
 
 import "./AddGroup.css"
+import { url_for_backend } from "../../index.js";
 
 function AddGroup(props)
 {  
@@ -18,7 +19,7 @@ function AddGroup(props)
     useEffect(()=>{
        async function getData()
        {
-         const result = await axios.get("http://localhost:4000/AllUsers");
+         const result = await axios.get(url_for_backend+"/AllUsers");
          var list_of_users = [];
          result.data.forEach((ele)=>{
             if(ele!==props.currentUser)
@@ -42,7 +43,7 @@ function AddGroup(props)
                     string_with_selected_users+=","+ele;
                 }
             })
-            const result = await axios.post(`http://localhost:4000/add/group/${props.currentUser}`,{
+            const result = await axios.post(url_for_backend+`/add/group/${props.currentUser}`,{
                 group_name:event.target.group_name.value,
                 group_members: string_with_selected_users
             });

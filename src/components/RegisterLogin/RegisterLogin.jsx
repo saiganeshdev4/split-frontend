@@ -4,6 +4,8 @@ import axios from "axios";
 import bcryptjs from "bcryptjs";
 import "./RegisterLogin.css";
 
+import { url_for_backend } from "../../index.js";
+
 function RegisterLogin(props)
 {   const [user,setUser] = new useState("");
     const [password,setPassword] = new useState("");
@@ -20,7 +22,7 @@ function RegisterLogin(props)
 
         async function getData()
         {
-           const result = await axios.get("http://localhost:4000/AllUsers");
+           const result = await axios.get(url_for_backend+"/AllUsers");
            setData(result.data);
            setIsLoading(false);
         }
@@ -53,13 +55,13 @@ function RegisterLogin(props)
                             }
                            body={...body,acc_password:hash};
                            
-                        const result = await axios.post("http://localhost:4000/add/user",body);
+                        const result = await axios.post(url_for_backend+"/add/user",body);
                         setAfterLogin(true);
                          });
                     }
                     else
                     {
-                      const result = await axios.get(`http://localhost:4000/credentials?user_name=${user}`);
+                      const result = await axios.get(url_for_backend+`/credentials?user_name=${user}`);
 
                       if(result.data.error)
                       {

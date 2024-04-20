@@ -3,6 +3,7 @@ import {useState,useEffect} from "react";
 import SingileGroup from './SingleGroup';
 
 import "./Groups.css";
+import { url_for_backend } from "../../index.js";
 
 function Groups(props){
     
@@ -11,7 +12,7 @@ function Groups(props){
     useEffect(()=>{
       async function getData()
       {
-        const result = await axios.get(`http://localhost:4000/groups/${props.currentUser}`);
+        const result = await axios.get(url_for_backend+`/groups/${props.currentUser}`);
         setData(result.data);
         SetIsLoading(false);
       }

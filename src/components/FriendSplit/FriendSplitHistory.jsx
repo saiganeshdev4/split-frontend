@@ -4,6 +4,7 @@ import axios from "axios";
 import SingleFriendSplit from "./SingleFriendSplit";
 
 import "./FriendSplitHistory.css";
+import { url_for_backend } from "../../index.js";
 
 function FriendSplitHistory(props)
 {
@@ -13,7 +14,7 @@ function FriendSplitHistory(props)
   useEffect(()=>{
     async function getData()
     {
-        var result = await axios.get(`http://localhost:4000/filterByFriend?current_user=${props.currentUser}&friend=${id}`)
+        var result = await axios.get(url_for_backend+`/filterByFriend?current_user=${props.currentUser}&friend=${id}`)
         setData(result.data);
         setIsLoading(false);
     }

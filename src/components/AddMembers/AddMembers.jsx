@@ -5,6 +5,7 @@ import axios from "axios";
 import Select from "react-select";
 
 import "./AddMembers.css";
+import { url_for_backend } from "../../index.js";
 
 function AddMembers(props)
 {
@@ -19,7 +20,7 @@ function AddMembers(props)
 
         async function getData()
         {
-             const result = await axios.get(`http://localhost:4000/listOfUsersNotPresentInGroup/${group_name}`);
+             const result = await axios.get(url_for_backend+`/listOfUsersNotPresentInGroup/${group_name}`);
              var list_of_users = [];
          result.data.forEach((ele)=>{
             list_of_users.push({value:ele,label:ele});
@@ -44,7 +45,7 @@ function AddMembers(props)
                 string_with_selected_users+=","+ele;
             }
         })
-        const result = await axios.put(`http://localhost:4000/addMembers/${group_name}`,{
+        const result = await axios.put(url_for_backend+`/addMembers/${group_name}`,{
             group_members: string_with_selected_users
         });
         

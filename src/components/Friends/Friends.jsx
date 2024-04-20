@@ -3,6 +3,7 @@ import axios from "axios";
 import SingleFriendEntry from "./SingleFriendEntry";
 
 import "./Friends.css";
+import { url_for_backend } from "../../index.js";
 
 function Friends(props)
 {
@@ -12,7 +13,7 @@ function Friends(props)
     useEffect(()=>{
         async function getData()
         {
-            const result = await axios.get(`http://localhost:4000/friends/${props.currentUser}`);
+            const result = await axios.get(url_for_backend`/friends/${props.currentUser}`);
             setData(result.data);
             SetIsLoading(false);
         }

@@ -3,6 +3,7 @@ import axios from "axios";
 import SingleActivity from "./SingleActivity";
 
 import "./Activities.css";
+import { url_for_backend } from "../../index.js";
 
 function Activities(props)
 {
@@ -12,7 +13,7 @@ function Activities(props)
     useEffect(()=>{
         async function getData()
         {
-           const result = await axios.get(`http://localhost:4000/activity/${props.currentUser}`);
+           const result = await axios.get(url_for_backend+`/activity/${props.currentUser}`);
            setData(result.data);
            setIsLoading(false);
         }

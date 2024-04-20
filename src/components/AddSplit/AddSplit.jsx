@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "./AddSplit.css";
-
-// known bugs
-//  1. make sure sum of money owed by everyone and totalMoney are equal.
+import { url_for_backend } from "../../index.js";
 
 
 function  AddSplit(props)
@@ -23,7 +21,7 @@ function  AddSplit(props)
 
     // Define options for the second picklist based on the selected value of the first picklist
     async function getSecondPickListOptions(firstDropListValue){
-      const result = await axios.get(`http://localhost:4000/group/${firstDropListValue}`);
+      const result = await axios.get(url_for_backend+`/group/${firstDropListValue}`);
       var modified_result = ["You"];
       result.data.group_members.forEach((ele)=> ele!==props.currentUser && modified_result.push(ele) );
       return modified_result;
@@ -42,7 +40,7 @@ async function handleFirstPickListChange (value) {
     useEffect(()=>{
         async function getData()
         {
-            var result = await axios.get(`http://localhost:4000/listOfGroups/${props.currentUser}`);
+            var result = await axios.get(url_for_backend+`/listOfGroups/${props.currentUser}`);
             setFirstPickListOptions(result.data);
             if(result.data.length)
             await handleFirstPickListChange(result.data[0]);
@@ -92,7 +90,7 @@ async function handleFirstPickListChange (value) {
 };
 console.log(body);
     try{
-    const result=await axios.post("http://localhost:4000/add/split/new",body);  
+    const result=await axios.post(url_for_backend+"/add/split/new",body);  
     
     }
     catch(err)

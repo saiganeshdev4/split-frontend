@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { url_for_backend } from "../../index.js";
 import "./Account.css";
 
 function Account(props)
@@ -43,13 +43,13 @@ function Account(props)
 
     async function handleDelete()
     {
-        var result = await axios.get(`http://localhost:4000/groups/${props.currentUser}`);
+        var result = await axios.get(url_for_backend+`/groups/${props.currentUser}`);
 
         var can_be_deleted = result.data.find((ele)=>ele.owe_list.length >0) === undefined;
 
         if(can_be_deleted)
         {
-            result = await axios.delete(`http://localhost:4000/delete/account/${props.currentUser}`);
+            result = await axios.delete(url_for_backend+`/delete/account/${props.currentUser}`);
             setMsg("Account has been deleted sucessfully!");
             setState("result");
         
@@ -66,10 +66,10 @@ function Account(props)
         if(passwordError!=="")
         return;
 
-        var result = await axios.post("http://localhost:4000/check/credentials",{user_name:props.currentUser,acc_password:oldPassword});
+        var result = await axios.post(url_for_backend+"/check/credentials",{user_name:props.currentUser,acc_password:oldPassword});
         if(result.data.msg==="valid credentials")
         {
-          result = await axios.put("http://localhost:4000/updatePassword",{user_name:props.currentUser,acc_password:password});
+          result = await axios.put(url_for_backend+"/updatePassword",{user_name:props.currentUser,acc_password:password});
           setMsg("password updated sucessfully");
           setState("result");
         }

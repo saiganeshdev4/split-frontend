@@ -3,6 +3,7 @@ import { useParams,useNavigate,Link } from "react-router-dom";
 import axios from "axios";
 
 import "./Split.css";
+import { url_for_backend } from "../../index.js";
 
 function Split(props)
 {
@@ -14,7 +15,7 @@ function Split(props)
    useEffect(()=>{
     async function getData()
     {
-      var result = await axios.get(`http://localhost:4000/split/${id}?current_user=${props.currentUser}`);
+      var result = await axios.get(url_for_backend+`/split/${id}?current_user=${props.currentUser}`);
       setData(result.data);
       setIsLoading(false);
     }
@@ -23,7 +24,7 @@ function Split(props)
 
    async function handleDelete()
    {
-         var result = await axios.delete(`http://localhost:4000/delete/split/${id}`);
+         var result = await axios.delete(url_for_backend+`/delete/split/${id}`);
          setAfterDelete(true);
    }
 

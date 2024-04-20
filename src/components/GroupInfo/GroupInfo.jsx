@@ -5,6 +5,7 @@ import SingleGroupInfoEntry from "./SingleGroupInfoEntry";
 import { Link } from "react-router-dom";
 
 import "./GroupInfo.css";
+import { url_for_backend } from "../../index.js";
 
 function GroupInfo(props)
 {
@@ -15,7 +16,7 @@ function GroupInfo(props)
     useEffect(()=>{
         async function getData()
         {
-             const result = await axios.get(`http://localhost:4000/group/split/${id}?current_user=${props.currentUser}`);
+             const result = await axios.get(url_for_backend+`/group/split/${id}?current_user=${props.currentUser}`);
              setData(result.data);
              setIsLoading(false);
         }

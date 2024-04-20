@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams,Link,useLocation,useNavigate } from "react-router-dom";
 
 import "./GroupData.css";
+import { url_for_backend } from "../../index.js";
 
 function GroupData(props)
 {
@@ -18,7 +19,7 @@ function GroupData(props)
     useEffect(()=>{
         async function getData()
         {
-            var result = await axios.get(`http://localhost:4000/group/${group_name}`);
+            var result = await axios.get(url_for_backend+`/group/${group_name}`);
             setData(result.data);
             setIsLoading(false);
         }
@@ -29,7 +30,7 @@ function GroupData(props)
     {
         if(leave_grp)
         {
-            var result =await axios.delete(`http://localhost:4000/removeMember/${group_name}?currentUser=${props.currentUser}`);
+            var result =await axios.delete(url_for_backend+`/removeMember/${group_name}?currentUser=${props.currentUser}`);
         }
         setAfterLeaveGrp(true);
     }
