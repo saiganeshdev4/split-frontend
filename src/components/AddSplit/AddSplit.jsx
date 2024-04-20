@@ -258,7 +258,9 @@ console.log(body);
           
         </div>
         :
+        <div className="add-split-container">
         <p>{"You are not part of any group yet, create a group to add split :)"}</p>
+        </div>
     );
   
     

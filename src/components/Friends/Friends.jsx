@@ -13,7 +13,7 @@ function Friends(props)
     useEffect(()=>{
         async function getData()
         {
-            const result = await axios.get(url_for_backend`/friends/${props.currentUser}`);
+            const result = await axios.get(url_for_backend+`/friends/${props.currentUser}`);
             setData(result.data);
             SetIsLoading(false);
         }
