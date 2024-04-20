@@ -19,7 +19,7 @@ function Groups(props){
       getData();
     },[]);
   
-    return ( <div className="groups-container"> {isLoading ? <p>Loading........</p> :
+    return ( <div className="groups-container"> {isLoading ? <p className="loading-message">Loading........</p> :
       
         data.length > 0 ?
         data.map((ele,ind)=>

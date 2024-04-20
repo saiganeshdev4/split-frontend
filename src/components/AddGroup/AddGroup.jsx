@@ -96,7 +96,7 @@ function AddGroup(props)
     options={data}
     isSearchable={true}
     onChange={setSelectedOptions}
-    styles={{} }
+    required
   />
   <br/>
   <button  className="form-button" type="submit">Submit</button>

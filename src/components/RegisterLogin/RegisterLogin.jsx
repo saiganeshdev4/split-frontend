@@ -131,7 +131,7 @@ function RegisterLogin(props)
         }
     }
     return isLoading ?
-    <p>Loading.......</p> : 
+    <div className="register-login-container"> <p className="loading-message">Loading.......</p> </div> : 
     
     afterLogin ? 
     <App currentUser={user} setAfterLogin={setAfterLogin} init={init} setIsRegister={setIsRegister}/> 

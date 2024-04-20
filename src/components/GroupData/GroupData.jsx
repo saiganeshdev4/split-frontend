@@ -46,7 +46,7 @@ return  <div className="group-data-container">
       
         :
         isLoading ? 
-        <p>Loading.......</p> 
+        <p className="loading-message">Loading.......</p> 
         :
         <div>
             <h1>{group_name}</h1>

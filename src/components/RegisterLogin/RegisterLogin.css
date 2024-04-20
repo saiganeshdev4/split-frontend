@@ -50,3 +50,7 @@
     background-color: #0056b3;
 }
 
+.loading-message {
+    font-size: 18px;
+    color: gray;
+  }

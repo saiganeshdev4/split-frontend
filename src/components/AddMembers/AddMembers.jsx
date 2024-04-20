@@ -79,7 +79,7 @@ function AddMembers(props)
                         options={usersWhoAreNotInGroup}
                         isSearchable={true}
                         onChange={setSelectedOptions}
-                        styles={{} }
+                        required
                         />
                         <br/>
                     <button className="form-button"  type="submit">Submit</button>

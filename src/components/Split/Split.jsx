@@ -36,7 +36,7 @@ function Split(props)
            </div>
             :
            <div className="split-info-container">
-            {isLoading ? <p>Loading....... </p> :
+            {isLoading ? <p className="loading-message">Loading....... </p> :
             <div>
              <h2>{data.split_name}</h2>
              <h2>{data.group_name}</h2>

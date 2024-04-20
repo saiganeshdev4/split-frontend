@@ -24,7 +24,7 @@ function FriendSplitHistory(props)
   return (
     
     <div className="split-details-container">
-      { isLoading ?  <p>Loading......</p> :
+      { isLoading ?  <p className="loading-message">Loading......</p> :
           <div>
         <h2>{id}</h2>
         {/* <button className="settle-up-button"> Settle Up</button> */}

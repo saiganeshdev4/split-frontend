@@ -26,4 +26,7 @@
     background-color: #0056b3; /* Change color as needed */
 }
 
-
+.loading-message {
+    font-size: 18px;
+    color: gray;
+  }

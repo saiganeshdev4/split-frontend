@@ -24,7 +24,7 @@ function GroupInfo(props)
     },[]);
 
     return <div className="group-info-container">
-       { isLoading ? <p>Loading.....</p> 
+       { isLoading ? <p className="loading-message">Loading.....</p> 
             :
            <div>
            <h1>{data.group_name}</h1>

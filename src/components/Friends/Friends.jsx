@@ -23,7 +23,7 @@ function Friends(props)
 
     return (
         <div className="friends-container">
-        {isLoading ? <p>Loading....</p> :
+        {isLoading ? <p className="loading-message">Loading....</p> :
         data.length > 0 ?
             data.map((ele,ind)=> 
                <SingleFriendEntry key={ind} id={ind} user={ele.user} money={ele.money}/>

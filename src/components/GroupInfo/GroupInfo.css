@@ -22,3 +22,8 @@
 .settle-up-button:hover, .group-info-button:hover {
     background-color: #0056b3; /* Change hover color as needed */
 }
+
+.loading-message {
+    font-size: 18px;
+    color: gray;
+  }

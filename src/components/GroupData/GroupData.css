@@ -15,7 +15,10 @@
     margin-bottom: 10px;
 }
 
-
+.loading-message {
+    font-size: 18px;
+    color: gray;
+  }
 
 .add-members-button, .leave-group-button,.leave-group-message button {
     margin-top: 10px;
