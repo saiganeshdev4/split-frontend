@@ -192,7 +192,8 @@ console.log(body);
                   value={totalMoney}
                   onChange={(e) => setTotalMoney(e.target.value)}
                   onWheel={numberInputOnWheelPreventChange}
-                  min="1"
+                  min="0.01"
+                  step="0.01"
                 />
           </label>
           <br />
@@ -214,7 +215,8 @@ console.log(body);
                 value={inputValues[option] || ''}
                 onChange={(e) => handleTextChange(option, e.target.value)}
                 onWheel={numberInputOnWheelPreventChange}
-                min="1"
+                min="0.01"
+                step="0.01"
                 required
               />}
               

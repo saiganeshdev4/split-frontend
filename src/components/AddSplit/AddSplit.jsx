@@ -58,7 +58,7 @@ async function handleFirstPickListChange (value) {
       if(ele)
       sum_of_money+=parseFloat(ele);
     })
-    // show alert if money is not equal note. in some case sum won't be equal ex: 1 person added split for 3 ppl and paid 100, now money owed by each user is 33.333 and sum of money is 99.999 which is not equal to 100
+    // show alert if money is not equal, note: in some case sum won't be equal ex: 1 person added split for 3 ppl and paid 100, now money owed by each user is 33.333 and sum of money is 99.999 which is not equal to 100
     if(totalMoney<sum_of_money || totalMoney-sum_of_money >= 0.1)  // 0<= totalMoney-sum_of_money<0.1 is correct range.
     {  // sum of money is not equals to total money
             setMoneyError("Total money is not equal to sum of money others owe you");
@@ -91,6 +91,7 @@ async function handleFirstPickListChange (value) {
 console.log(body);
     try{
     const result=await axios.post(url_for_backend+"/add/split/new",body);  
+    console.log("added to backend");
     
     }
     catch(err)
@@ -220,7 +221,8 @@ console.log(body);
                   value={totalMoney}
                   onChange={(e) => setTotalMoney(e.target.value)}
                   onWheel={numberInputOnWheelPreventChange}
-                  min="1"
+                  min="0.01"
+                  step="0.01"
                   required
                 />
           
@@ -243,7 +245,8 @@ console.log(body);
                 value={inputValues[option] || ''}
                 onChange={(e) => handleTextChange(option, e.target.value)}
                 onWheel={numberInputOnWheelPreventChange}
-                min="1"
+                min="0.01"
+                step="0.01"
                 required
               />}
               

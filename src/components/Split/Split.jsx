@@ -35,8 +35,9 @@ function Split(props)
            <button onClick={()=>{navigate(-1);}}>Go back</button>
            </div>
             :
-           isLoading ? <p>Loading....... </p>:
            <div className="split-info-container">
+            {isLoading ? <p>Loading....... </p> :
+            <div>
              <h2>{data.split_name}</h2>
              <h2>{data.group_name}</h2>
              <p>{data.thirdLine}</p>
@@ -48,6 +49,8 @@ function Split(props)
              <Link to={`/editSplit/${id}?group_name=${data.group_name}`}><button>Edit Split</button></Link> 
              <button onClick={handleDelete}>Delete Split</button>
              </div>            
+             }
+             </div>
              }
            </div>
    );

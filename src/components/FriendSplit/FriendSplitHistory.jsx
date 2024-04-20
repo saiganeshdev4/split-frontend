@@ -22,13 +22,17 @@ function FriendSplitHistory(props)
   },[]);
 
   return (
-    isLoading ? <p>Loading......</p> :
+    
     <div className="split-details-container">
+      { isLoading ?  <p>Loading......</p> :
+          <div>
         <h2>{id}</h2>
         {/* <button className="settle-up-button"> Settle Up</button> */}
         {data.map((ele,ind)=>
              <SingleFriendSplit  key={ind} ele={ele} />
         )}
+        </div>
+      }
     </div>
   );
 }
