@@ -30,6 +30,14 @@ function RegisterLogin(props)
         {
            const result = await axios.get(url_for_backend+"/AllUsers");
            setData(result.data);
+           // below check is necessary, it solves the bug:
+           // user logged-in in one device and deleted account in another device
+           // now first device still has user_name and afterLogin stored in localStorage.
+            if(user!=="" && !result.data.includes(user))
+            {
+                setUser("");
+                setAfterLogin(false);
+            }
            setIsLoading(false);
         }
         getData();
