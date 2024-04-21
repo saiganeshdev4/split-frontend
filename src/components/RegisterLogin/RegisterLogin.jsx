@@ -7,11 +7,17 @@ import "./RegisterLogin.css";
 import { url_for_backend } from "../../index.js";
 
 function RegisterLogin(props)
-{   const [user,setUser] = new useState("");
+{   const [user,setUser] = new useState(() => {
+    const storedValue = localStorage.getItem('user_name');
+    return storedValue !== null ? storedValue : "";
+  });
+  const [afterLogin,setAfterLogin] = new useState(()=>{
+    var storedValue = localStorage.getItem('afterLogin');
+    return storedValue === "true";
+  });
     const [password,setPassword] = new useState("");
     const [confirmP,setConfirmP] = new useState("");
     const [isRegister,setIsRegister] = new useState(true);
-    const [afterLogin,setAfterLogin] = new useState(false);
     const [passwordError,setPasswordError] = new useState("");
     const [usernameError,setUsernameError] = new useState("");
     const [loginError,setLoginError] = new useState("");
@@ -57,6 +63,8 @@ function RegisterLogin(props)
                            
                         const result = await axios.post(url_for_backend+"/add/user",body);
                         setAfterLogin(true);
+                        localStorage.setItem('user_name',body.user_name);
+                        localStorage.setItem('afterLogin',"true");
                          });
                     }
                     else
@@ -77,6 +85,8 @@ function RegisterLogin(props)
                             if(res)
                             {
                                 setAfterLogin(true);
+                                localStorage.setItem('user_name',body.user_name);
+                                localStorage.setItem('afterLogin',"true");
                             }
                             else
                             {

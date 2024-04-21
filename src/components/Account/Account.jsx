@@ -86,6 +86,8 @@ function Account(props)
         <button type="button" onClick={()=>{  props.init();
                 props.setIsRegister(false);
                 props.setAfterLogin(false);
+                localStorage.setItem('user_name',"");
+                localStorage.setItem('afterLogin',"false");
                 navigate("/");}}> logout </button>
     </div>
     : 
@@ -139,6 +141,8 @@ function Account(props)
             {   props.init();
                 props.setIsRegister(true);
                 props.setAfterLogin(false);
+                localStorage.setItem('user_name',"");
+                localStorage.setItem('afterLogin',"false");
                 navigate("/");
             }
         }}>{msg.split(" ")[0]!=="Account" ? "Go Back" : "Go to Register Page"}</button>
