@@ -50,7 +50,7 @@ return  <div className="group-data-container">
         :
         <div>
             <h1>{group_name}</h1>
-            <h2>Created by : {data.group_creator===props.currentUser ? "You" : data.group_creator}</h2>
+            {/* <h2>Created by : {data.group_creator===props.currentUser ? "You" : data.group_creator}</h2> */}
             <h3>Group members:</h3>
             {data.group_members.map((ele,id) =>{
                 return <p key={id}>{ele===props.currentUser ? "You" : ele}</p>;
