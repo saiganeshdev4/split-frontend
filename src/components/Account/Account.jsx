@@ -80,7 +80,7 @@ function Account(props)
     }
     return state === "account" ?
     <div className="account-container">
-        <h2 className="account-title">Welcome! {props.currentUser}</h2>
+        <h2 className="account-title">Hola! {props.currentUser}</h2>
         <button type="button" onClick={()=>{setState("password")}}>change password</button>
         <button type="button" onClick={handleDelete}>delete account</button>
         <button type="button" onClick={()=>{  props.init();
